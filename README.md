@@ -1,31 +1,15 @@
-# create your own yt-dlp extractor
+# YTDLP-KHInsider
+A plugin that allows you to download MP3s from KHInsider via yt-dlp
 
-## install the project as editable package
-`pip install -e .`
+## Installing
+Run: <!-- wow, I really need a good readme --> <br>
+```sh
+pip install git+https://github.com/BurAndBY/ytdlp-khinsider.git
+```
 
-## implement the extractor
-Simply put the code under `yt_dlp_plugins/extractor/<name>.py`.
+## Building
+Just run `pip install -e .` and then do your edits.
+After the edits don't forget to do Unit Testing.
 
-Test by executing the extractor:
-
-`yt-dlp -v <url>`
-
-or just run the unit tests:
-
+## Unit Testing
 `python .\setup.py test`
-
-## create the package
-Edit `setup.cfg` according to your needs. 
-For details see https://setuptools.pypa.io/en/latest/userguide/declarative_config.html
-
-Create a wheel package:
-
-```
-python -m pip install -U setuptools wheel
-python setup.py bdist_wheel
-```
-
-If the build is succesful your package can be found in `build/<name>-<version>-py3-none-any.whl`.
-You can then install it with `pip` or upload to [PyPI](https://pypi.org).
-
-For more information about packaging see https://packaging.python.org/en/latest/tutorials/packaging-projects/.
